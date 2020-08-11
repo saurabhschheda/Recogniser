@@ -2,13 +2,12 @@ import cv2
 import pandas as pd
 import pickle
 
-
 class Predictor:
-    people = [person[0] for person in pd.read_excel("People.xlsx").values]
+    people = [person[0] for person in pd.read_excel("../data/People.csv").values]
     
     def __init__(self, preprocessor):
         self.preprocessor = preprocessor
-        file = open("classifier.pkl", "rb")
+        file = open("../data/classifier.pkl", "rb")
         self.model = pickle.load(file)
  
     def predict(self, image_paths):

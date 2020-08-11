@@ -3,7 +3,6 @@ import dlib
 import openface
 import numpy as np
 
-
 class Preprocessor:
     face_aligner = openface.AlignDlib("shape_predictor_68_face_landmarks.dat")
     face_detector = dlib.get_frontal_face_detector()
